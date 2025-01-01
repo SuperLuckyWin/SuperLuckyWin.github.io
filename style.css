@@ -1,96 +1,136 @@
-/* 基本布局 */
-body {
-    font-family: Arial, sans-serif;
+/* 重置样式 */
+* {
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
+    box-sizing: border-box;
 }
 
-header {
-    background-color: #2d2d2d;
-    color: white;
+body {
+    font-family: 'Helvetica Neue', sans-serif;
+    background-color: #f4f7fa;
+    color: #2c3e50;
+    line-height: 1.6;
+    padding: 0;
+    margin: 0;
+}
+
+/* 容器 */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
     padding: 20px;
+}
+
+/* Header 样式 */
+header {
+    background-color: #3498db;
+    padding: 20px 0;
+    color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
     text-align: center;
+    font-size: 2.5rem;
+    font-family: 'Roboto', sans-serif;
 }
 
 nav ul {
     list-style: none;
-    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
 }
 
 nav ul li {
-    display: inline-block;
-    margin-right: 20px;
-    position: relative;
+    margin: 0 15px;
 }
 
 nav ul li a {
-    color: white;
+    color: #fff;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 1.2rem;
+    font-weight: 500;
 }
 
-nav ul li:hover .dropdown {
-    display: block;
+nav ul li a:hover {
+    text-decoration: underline;
 }
 
-nav ul li .dropdown {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: #333;
-    padding: 10px;
-    min-width: 180px;
+/* Section 样式 */
+section {
+    margin-bottom: 40px;
 }
 
-nav ul li .dropdown li {
-    display: block;
-    padding: 8px;
+section h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #3498db;
+    margin-bottom: 20px;
 }
 
-nav ul li .dropdown li a {
-    color: white;
+section ul {
+    list-style: none;
 }
 
-nav ul li .dropdown li a:hover {
-    background-color: #555;
-}
-
-/* 二级菜单的样式 */
-nav ul li .dropdown-2 {
-    display: none;
-    position: absolute;
-    top: 0;
-    left: 180px; /* 使二级菜单在一级菜单的右侧显示 */
-    background-color: #333;
-    padding: 10px;
-    min-width: 180px;
-}
-
-nav ul li:hover .dropdown-2 {
-    display: block;
-}
-
-nav ul li .dropdown-2 li {
-    display: block;
-    padding: 8px;
-}
-
-nav ul li .dropdown-2 li a {
-    color: white;
-}
-
-nav ul li .dropdown-2 li a:hover {
-    background-color: #555;
-}
-
-/* 样式调整 */
-footer {
-    background-color: #2d2d2d;
-    color: white;
+section ul li {
+    background-color: #fff;
+    margin: 15px 0;
     padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+section ul li h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+section ul li p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+section ul li a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+section ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Footer 样式 */
+footer {
+    background-color: #2c3e50;
+    color: #fff;
+    padding: 20px 0;
     text-align: center;
-    margin-top: 40px;
+}
+
+/* 响应式设计 */
+@media screen and (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        margin-top: 20px;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    section ul li {
+        padding: 15px;
+    }
+
+    section h2 {
+        font-size: 1.5rem;
+    }
 }
