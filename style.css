@@ -1,3 +1,4 @@
+/* 通用样式 */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -12,44 +13,48 @@ header {
     padding: 20px;
 }
 
-header nav ul {
-    list-style: none;
-    padding: 0;
+header h1 {
+    margin: 0;
+    font-size: 2em;
 }
 
-header nav ul li {
-    display: inline;
-    margin: 0 10px;
-}
-
-header nav ul li a {
-    color: white;
-    text-decoration: none;
-}
-
-#popular-tools {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+section {
     padding: 20px;
+    margin: 20px;
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+h2 {
+    font-size: 1.6em;
+    margin-bottom: 10px;
+}
+
+h3 {
+    margin: 10px 0;
 }
 
 .tool {
-    background-color: white;
-    padding: 10px;
-    margin: 10px;
-    width: 200px;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
 }
 
-.tool h3 {
-    margin: 0;
-    font-size: 1.2em;
+.tool a {
+    text-decoration: none;
+    color: #0073e6;
 }
 
-.tool p {
-    font-size: 0.9em;
+.tool a:hover {
+    text-decoration: underline;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    margin-bottom: 10px;
 }
 
 footer {
@@ -58,4 +63,8 @@ footer {
     text-align: center;
     padding: 10px;
     margin-top: 20px;
+}
+
+footer p {
+    margin: 0;
 }
