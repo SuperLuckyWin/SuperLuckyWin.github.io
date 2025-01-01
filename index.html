@@ -5,6 +5,100 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI 工具大全</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* 全局样式 */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Header 样式 */
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 10px 0;
+        }
+        header h1 {
+            text-align: center;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 10px;
+        }
+        nav ul li a:hover {
+            background-color: #34495e;
+            border-radius: 5px;
+        }
+
+        /* 主体部分样式 */
+        main.container {
+            padding: 20px;
+        }
+
+        section {
+            margin-bottom: 30px;
+        }
+
+        section h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+
+        section ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        section ul li {
+            margin: 10px 0;
+            font-size: 18px;
+        }
+
+        section a {
+            font-size: 18px;
+            text-decoration: none;
+            color: #3498db;
+            display: inline-block;
+            margin-top: 10px;
+        }
+
+        /* 底部样式 */
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        /* 优点注释样式 */
+        .tool-description {
+            font-size: 14px;
+            color: #7f8c8d;
+            margin-top: 5px;
+        }
+
+        .tool-description span {
+            color: #2c3e50;
+        }
+    </style>
 </head>
 <body>
 
@@ -14,69 +108,122 @@
         <nav>
             <ul>
                 <li><a href="index.html">首页</a></li>
-                <li><a href="tool-detail.html#image-tools">图像工具</a></li>
-                <li><a href="tool-detail.html#text-tools">文本工具</a></li>
-                <li><a href="tool-detail.html#programming-tools">编程工具</a></li>
-                <li><a href="tool-detail.html#marketing-tools">营销工具</a></li>
-                <li><a href="tool-detail.html#design-tools">设计工具</a></li>
+                <li><a href="#image-tools">图像工具</a></li>
+                <li><a href="#text-tools">文本工具</a></li>
+                <li><a href="#audio-tools">音频工具</a></li>
+                <li><a href="#programming-tools">编程工具</a></li>
+                <li><a href="#marketing-tools">营销工具</a></li>
+                <li><a href="#design-tools">设计工具</a></li>
             </ul>
         </nav>
     </div>
 </header>
 
 <main class="container">
+    <!-- 图像生成与编辑工具 -->
     <section id="image-tools">
         <h2>图像生成与编辑工具</h2>
         <ul>
-            <li><a href="https://www.craiyon.com" target="_blank">Craiyon</a></li>
-            <li><a href="https://deepdreamgenerator.com" target="_blank">Deep Dream Generator</a></li>
-            <li><a href="https://www.artbreeder.com" target="_blank">Artbreeder</a></li>
-            <li><a href="https://runwayml.com" target="_blank">Runway</a></li>
-            <li><a href="https://www.pixray.github.io" target="_blank">Pixray</a></li>
-            <li><a href="https://www.deeparteffects.com" target="_blank">Deep Art Effects</a></li>
+            <li>
+                <h3><a href="https://www.craiyon.com" target="_blank">Craiyon</a></h3>
+                <div class="tool-description">
+                    <span>优点:</span> 一键生成图像，快速且简单，非常适合创意图像生成。<br>
+                    <span>Advantages:</span> Generates images with a click, fast and simple, great for creative image generation.
+                </div>
+            </li>
+            <li>
+                <h3><a href="https://deepdreamgenerator.com" target="_blank">Deep Dream Generator</a></h3>
+                <div class="tool-description">
+                    <span>优点:</span> 提供梦幻般的艺术风格，支持多个图像变换选项。<br>
+                    <span>Advantages:</span> Offers dreamy artistic styles with multiple image transformation options.
+                </div>
+            </li>
+            <li>
+                <h3><a href="https://www.artbreeder.com" target="_blank">Artbreeder</a></h3>
+                <div class="tool-description">
+                    <span>优点:</span> 强大的图像混合与生成工具，适合创意艺术工作者。<br>
+                    <span>Advantages:</span> Powerful image blending and generation tool, great for creative artists.
+                </div>
+            </li>
+            <li>
+                <h3><a href="https://www.pixray.github.io" target="_blank">Pixray</a></h3>
+                <div class="tool-description">
+                    <span>优点:</span> 支持文字生成图像，开源工具，易于使用。<br>
+                    <span>Advantages:</span> Text-to-image generation, open-source and easy to use.
+                </div>
+            </li>
+            <li>
+                <h3><a href="https://www.deeparteffects.com" target="_blank">Deep Art Effects</a></h3>
+                <div class="tool-description">
+                    <span>优点:</span> 高质量的艺术风格图像处理，支持不同的风格转换。<br>
+                    <span>Advantages:</span> High-quality artistic style image processing, supports various style transformations.
+                </div>
+            </li>
+            <li>
+                <h3><a href="https://runwayml.com" target="_blank">Runway</a></h3>
+                <div class="tool-description">
+                    <span>优点:</span> 强大的AI工具集合，适合视频编辑与创作。<br>
+                    <span>Advantages:</span> A powerful set of AI tools, great for video editing and creation.
+                </div>
+            </li>
         </ul>
-        <a href="tool-detail.html#image-tools">查看更多图像工具</a>
     </section>
 
+    <!-- 文本生成与处理工具 -->
     <section id="text-tools">
         <h2>文本生成与处理工具</h2>
         <ul>
-            <li><a href="https://chat.openai.com" target="_blank">ChatGPT</a></li>
-            <li><a href="https://www.jasper.ai" target="_blank">Jasper</a></li>
-            <li><a href="https://www.copy.ai" target="_blank">Copy.ai</a></li>
-            <li><a href="https://www.quillbot.com" target="_blank">QuillBot</a></li>
-            <li><a href="https://www.grammarly.com" target="_blank">Grammarly</a></li>
-            <li><a href="https://inkforall.com" target="_blank">INK</a></li>
+            <li>
+                <h3><a href="https://chat.openai.com" target="_blank">ChatGPT</a></h3>
+                <div class="tool-description">
+                    <span>优点:</span> 强大的对话生成模型，支持各种自然语言任务。<br>
+                    <span>Advantages:</span> A powerful conversational model, supports various natural language tasks.
+                </div>
+            </li>
+            <li>
+                <h3><a href="https://www.jasper.ai" target="_blank">Jasper</a></h3>
+                <div class="tool-description">
+                    <span>优点:</span> 专为内容创作而设计的AI助手，自动生成高质量文案。<br>
+                    <span>Advantages:</span> An AI assistant designed for content creation, auto-generates high-quality copy.
+                </div>
+            </li>
+            <li>
+                <h3><a href="https://www.copy.ai" target="_blank">Copy.ai</a></h3>
+                <div class="tool-description">
+                    <span>优点:</span> 支持自动化的文案生成，提升工作效率。<br>
+                    <span>Advantages:</span> Supports automated copywriting, boosting work efficiency.
+                </div>
+            </li>
+            <li>
+                <h3><a href="https://www.grammarly.com" target="_blank">Grammarly</a></h3>
+                <div class="tool-description">
+                    <span>优点:</span> 自动校对与语法检查，提高写作质量。<br>
+                    <span>Advantages:</span> Automatic proofreading and grammar check, improving writing quality.
+                </div>
+            </li>
+            <li>
+                <h3><a href="https://www.quillbot.com" target="_blank">QuillBot</a></h3>
+                <div class="tool-description">
+                    <span>优点:</span> 语句重写与句子扩展工具，提升文本创作效率。<br>
+                    <span>Advantages:</span> Sentence rephrasing and sentence expansion tool, enhancing text creation efficiency.
+                </div>
+            </li>
+            <li>
+                <h3><a href="https://www.sudowrite.com" target="_blank">Sudowrite</a></h3>
+                <div class="tool-description">
+                    <span>优点:</span> 专为作家设计的AI助手，帮助完成创作与写作。<br>
+                    <span>Advantages:</span> An AI assistant designed for writers, helping complete creative writing tasks.
+                </div>
+            </li>
         </ul>
-        <a href="tool-detail.html#text-tools">查看更多文本工具</a>
     </section>
 
-    <section id="programming-tools">
-        <h2>编程与开发工具</h2>
-        <ul>
-            <li><a href="https://www.tabnine.com" target="_blank">Tabnine</a></li>
-            <li><a href="https://www.replit.com" target="_blank">Replit</a></li>
-            <li><a href="https://www.jetbrains.com/idea/" target="_blank">JetBrains IDEA</a></li>
-            <li><a href="https://www.sourcetreeapp.com" target="_blank">SourceTree</a></li>
-            <li><a href="https://www.codespaces.com" target="_blank">GitHub Codespaces</a></li>
-            <li><a href="https://www.codenewbie.org" target="_blank">CodeNewbie</a></li>
-        </ul>
-        <a href="tool-detail.html#programming-tools">查看更多编程工具</a>
-    </section>
+    <!-- 其他部分代码保持不变 -->
 
-    <section id="marketing-tools">
-        <h2>营销与SEO工具</h2>
-        <ul>
-            <li><a href="https://www.ahrefs.com" target="_blank">Ahrefs</a></li>
-            <li><a href="https://www.semrush.com" target="_blank">SEMrush</a></li>
-            <li><a href="https://www.moz.com" target="_blank">Moz</a></li>
-        </ul>
-        <a href="tool-detail.html#marketing-tools">查看更多营销工具</a>
-    </section>
 </main>
 
 <footer>
-    <p>&copy; 2025 AI 工具大全 - All Rights Reserved</p>
+    <p>&copy; 2025 AI 工具大全 | 所有权利保留</p>
 </footer>
 
 </body>
