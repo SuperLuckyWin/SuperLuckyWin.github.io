@@ -1,130 +1,62 @@
-/* 全局样式 */
+/* 页面背景和字体 */
 body {
-    font-family: 'Roboto', sans-serif;
-    background-color: #f9f9f9;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
     margin: 0;
     padding: 0;
 }
 
-/* 顶部导航栏 */
 header {
-    background-color: #003366; /* 深蓝色背景 */
+    background-color: #3b5998;
     color: white;
-    padding: 30px 0;
     text-align: center;
+    padding: 20px 0;
 }
 
-header nav ul {
-    list-style: none;
-    padding: 0;
-}
-
-header nav ul li {
-    display: inline;
-    margin-right: 20px;
-}
-
-header nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 18px;
-}
-
-/* 大图背景 */
-.hero {
-    background-color: #FF6600; /* 亮橙色背景 */
-    padding: 100px 0;
-    text-align: center;
-    color: white;
-}
-
-.hero-text h2 {
-    font-size: 48px;
-    margin-bottom: 20px;
-}
-
-.hero-text p {
-    font-size: 24px;
-    margin-bottom: 30px;
-}
-
-.hero .btn-primary {
-    background-color: #333;
-    padding: 10px 20px;
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    border-radius: 5px;
-}
-
-/* 工具卡片展示 */
-.tools-section {
-    padding: 40px;
-    background-color: white;
-    text-align: center;
-}
-
-.tools-category {
-    margin-bottom: 40px;
-}
-
-.tools-container {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
-}
-
-.tool-card {
-    background-color: #fff;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    text-align: center;
-    width: 280px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    margin-bottom: 20px;
-}
-
-.tool-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
-}
-
-.tool-icon {
-    font-size: 48px;
-    color: #FF6600;
-    margin-bottom: 20px;
-}
-
-.tool-card h3 {
-    font-size: 24px;
-    margin-top: 10px;
-}
-
-.tool-card p {
-    font-size: 16px;
-    color: #555;
-}
-
-.tool-card .btn-secondary {
-    margin-top: 10px;
-    background-color: #003366;
-    color: white;
-    text-decoration: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-}
-
-.tool-card .btn-secondary:hover {
-    background-color: #555;
-}
-
-/* 底部 */
 footer {
-    background-color: #003366;
+    background-color: #333;
     color: white;
     text-align: center;
+    padding: 10px 0;
+}
+
+/* 工具列表样式 */
+#tool-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
     padding: 20px;
+}
+
+.tool-item {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    padding: 20px;
+    width: 200px;
+    text-align: center;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* 推荐区域样式 */
+#recommendations {
+    background-color: #fff;
+    padding: 20px;
+    margin-top: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
