@@ -32,9 +32,7 @@ header nav ul li a {
 
 /* 大图背景 */
 .hero {
-    background-image: url('hero-bg.jpg');
-    background-size: cover;
-    background-position: center;
+    background-color: #1e90ff; /* 使用一种鲜明的色调 */
     padding: 100px 0;
     text-align: center;
     color: white;
@@ -51,7 +49,7 @@ header nav ul li a {
 }
 
 .hero .btn-primary {
-    background-color: #1e90ff;
+    background-color: #333;
     padding: 10px 20px;
     text-decoration: none;
     color: white;
@@ -79,11 +77,17 @@ header nav ul li a {
     padding: 20px;
     text-align: center;
     width: 280px;
+    transition: transform 0.3s ease-in-out;
 }
 
-.tool-card img {
-    width: 100%;
-    border-radius: 5px;
+.tool-card:hover {
+    transform: scale(1.05);
+}
+
+.tool-icon {
+    font-size: 48px;
+    color: #1e90ff;
+    margin-bottom: 20px;
 }
 
 .tool-card h3 {
@@ -105,8 +109,8 @@ header nav ul li a {
     border-radius: 5px;
 }
 
-.tool-card:hover {
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+.tool-card .btn-secondary:hover {
+    background-color: #555;
 }
 
 /* 底部 */
