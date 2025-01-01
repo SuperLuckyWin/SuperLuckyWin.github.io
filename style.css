@@ -65,6 +65,10 @@ header nav ul li a {
     text-align: center;
 }
 
+.tools-category {
+    margin-bottom: 40px;
+}
+
 .tools-container {
     display: flex;
     justify-content: center;
