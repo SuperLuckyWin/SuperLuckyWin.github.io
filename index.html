@@ -3,46 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI 工具导航</title>
+    <title>AI 工具导航网站</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- 导航栏 -->
     <header>
-        <h1>欢迎来到 AI 工具导航网站</h1>
-        <p>探索和发现最全面的 AI 工具，帮助你提升工作效率。</p>
+        <div class="logo">
+            <h1>AI 工具导航</h1>
+        </div>
         <nav>
             <ul>
                 <li><a href="index.html">首页</a></li>
                 <li><a href="categories.html">分类工具</a></li>
-                <li><a href="free-tools.html">免费 AI 工具</a></li>
+                <li><a href="free-tools.html">免费工具</a></li>
             </ul>
         </nav>
     </header>
 
-    <section id="popular-tools">
-        <h2>热门 AI 工具</h2>
-        <div class="tool">
-            <h3><a href="https://openai.com" target="_blank">OpenAI</a></h3>
-            <p>提供强大的 GPT-3 和图像生成模型 DALL·E。</p>
-        </div>
-        <div class="tool">
-            <h3><a href="https://www.midjourney.com" target="_blank">MidJourney</a></h3>
-            <p>生成艺术风格的图像。</p>
-        </div>
-        <div class="tool">
-            <h3><a href="https://huggingface.co" target="_blank">Hugging Face</a></h3>
-            <p>提供开源的自然语言处理模型。</p>
-        </div>
-        <div class="tool">
-            <h3><a href="https://runwayml.com" target="_blank">Runway</a></h3>
-            <p>一个 AI 创意工具平台，支持视频和图像创作。</p>
-        </div>
-        <div class="tool">
-            <h3><a href="https://deepai.org" target="_blank">DeepAI</a></h3>
-            <p>提供图像生成、文本生成等多种 AI 工具。</p>
+    <!-- 首页大图 -->
+    <section class="hero">
+        <div class="hero-text">
+            <h2>探索最新的 AI 工具</h2>
+            <p>让工作和生活更智能</p>
+            <a href="categories.html" class="btn-primary">浏览工具</a>
         </div>
     </section>
 
+    <!-- 工具卡片展示 -->
+    <section class="tools-section">
+        <h2>热门 AI 工具</h2>
+        <div class="tools-container">
+            <div class="tool-card">
+                <img src="tool1.jpg" alt="工具1">
+                <h3>ChatGPT</h3>
+                <p>OpenAI 提供的强大对话式 AI 工具。</p>
+                <a href="https://chat.openai.com" class="btn-secondary">了解更多</a>
+            </div>
+            <div class="tool-card">
+                <img src="tool2.jpg" alt="工具2">
+                <h3>MidJourney</h3>
+                <p>艺术风格图像生成工具。</p>
+                <a href="https://www.midjourney.com" class="btn-secondary">了解更多</a>
+            </div>
+            <div class="tool-card">
+                <img src="tool3.jpg" alt="工具3">
+                <h3>Hugging Face</h3>
+                <p>自然语言处理模型和工具。</p>
+                <a href="https://huggingface.co" class="btn-secondary">了解更多</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 底部 -->
     <footer>
         <p>&copy; 2025 AI 工具导航网站</p>
     </footer>
