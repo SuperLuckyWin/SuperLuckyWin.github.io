@@ -20,8 +20,9 @@ nav ul {
 }
 
 nav ul li {
-    display: inline;
+    display: inline-block;
     margin-right: 20px;
+    position: relative;
 }
 
 nav ul li a {
@@ -30,18 +31,39 @@ nav ul li a {
     font-size: 18px;
 }
 
+nav ul li:hover .dropdown {
+    display: block;
+}
+
+nav ul li .dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #333;
+    padding: 10px;
+    min-width: 180px;
+}
+
+nav ul li .dropdown li {
+    display: block;
+    padding: 8px;
+}
+
+nav ul li .dropdown li a {
+    color: white;
+}
+
+nav ul li .dropdown li a:hover {
+    background-color: #555;
+}
+
 h1 {
     margin-top: 0;
 }
 
-h2 {
+h2, h3 {
     color: #2d2d2d;
-    font-size: 24px;
-}
-
-h3 {
-    font-size: 22px;
-    color: #444;
 }
 
 ul {
