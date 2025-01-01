@@ -7,31 +7,31 @@
 }
 
 body {
-    background-color: #f2f2f2;
+    background-color: #f4f6f9;
     color: #333;
     font-size: 16px;
     line-height: 1.6;
-    padding: 0 20px;
+    padding: 0;
 }
 
-/* 页头 */
 header {
-    background-color: #2d2d2d;
+    background-color: #1d1d1d;
     color: white;
-    padding: 30px 20px;
+    padding: 20px;
     text-align: center;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 header h1 {
     font-size: 3em;
-    margin-bottom: 10px;
-    color: #fff;
+    font-weight: bold;
+    margin: 0;
 }
 
 nav ul {
     list-style: none;
-    padding: 10px 0;
+    padding: 15px 0;
+    text-align: center;
 }
 
 nav ul li {
@@ -43,21 +43,23 @@ nav ul li a {
     text-decoration: none;
     color: white;
     font-size: 1.2em;
-    transition: color 0.3s;
+    padding: 10px 20px;
+    transition: background-color 0.3s;
+    border-radius: 5px;
 }
 
 nav ul li a:hover {
-    color: #f9a825;
+    background-color: #f9a825;
+    color: white;
 }
 
-/* 主内容 */
+/* 主内容区 */
 #all-tools, #free-tools {
     max-width: 1200px;
     margin: 50px auto;
     padding: 20px;
 }
 
-/* 工具列表 */
 h2 {
     font-size: 2.5em;
     color: #333;
@@ -67,21 +69,21 @@ h2 {
 ul {
     list-style: none;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 20px;
 }
 
 ul li {
     background-color: #fff;
     padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 ul li:hover {
     transform: translateY(-10px);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
 }
 
 ul li a {
@@ -92,12 +94,8 @@ ul li a {
     display: block;
 }
 
-ul li a:hover {
-    color: #f9a825;
-}
-
 ul li p {
-    font-size: 1em;
+    font-size: 1.1em;
     color: #666;
     margin-top: 10px;
 }
@@ -110,14 +108,14 @@ ul li ul {
 
 /* 分类标题 */
 h3 {
-    font-size: 2.2em;
+    font-size: 2em;
     color: #333;
     margin-top: 40px;
 }
 
 /* 页脚 */
 footer {
-    background-color: #2d2d2d;
+    background-color: #1d1d1d;
     color: white;
     text-align: center;
     padding: 20px;
@@ -132,7 +130,7 @@ footer {
     }
 
     header h1 {
-        font-size: 2em;
+        font-size: 2.5em;
     }
 
     nav ul {
@@ -149,7 +147,7 @@ footer {
     }
 
     h2 {
-        font-size: 2em;
+        font-size: 2.2em;
     }
 
     h3 {
