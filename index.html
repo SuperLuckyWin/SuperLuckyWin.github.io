@@ -3,96 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI 工具大全</title>
+    <title>工具详细信息 | AI 工具大全</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header>
-    <h1>AI 工具大全</h1>
-    <nav>
-        <ul>
-            <li><a href="#all-tools">所有工具</a></li>
-            <li><a href="#free-tools">免费工具</a></li>
-            <li><a href="#">工具分类</a>
-                <ul class="dropdown">
-                    <li><a href="#">图像工具</a>
-                        <ul class="dropdown-2">
-                            <li><a href="tool-detail.html#image-tools">查看更多图像工具</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#">文本工具</a>
-                        <ul class="dropdown-2">
-                            <li><a href="tool-detail.html#text-tools">查看更多文本工具</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#">音频工具</a>
-                        <ul class="dropdown-2">
-                            <li><a href="tool-detail.html#audio-tools">查看更多音频工具</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#">编程工具</a>
-                        <ul class="dropdown-2">
-                            <li><a href="tool-detail.html#programming-tools">查看更多编程工具</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </li>
-        </ul>
-    </nav>
+    <div class="container">
+        <h1>AI 工具大全</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">首页</a></li>
+                <li><a href="#image-tools">图像工具</a></li>
+                <li><a href="#text-tools">文本工具</a></li>
+                <li><a href="#audio-tools">音频工具</a></li>
+                <li><a href="#programming-tools">编程工具</a></li>
+                <li><a href="#marketing-tools">营销工具</a></li>
+                <li><a href="#design-tools">设计工具</a></li>
+            </ul>
+        </nav>
+    </div>
 </header>
 
-<!-- 所有工具 -->
-<div id="all-tools">
-    <h2>所有 AI 工具</h2>
-    <p>探索全面的 AI 工具集合，涵盖各个领域，为您提供最好的技术支持。</p>
-</div>
+<main class="container">
+    <!-- 图像生成与编辑工具 -->
+    <section id="image-tools">
+        <h2>图像生成与编辑工具</h2>
+        <ul>
+            <li>
+                <h3><a href="https://www.craiyon.com" target="_blank">Craiyon</a></h3>
+                <p>AI 图像生成工具，可以根据用户的描述生成各种风格的图像。</p>
+                <p><strong>优点</strong>: 快速生成艺术图像，免费使用。</p>
+            </li>
+            <li>
+                <h3><a href="https://deepdreamgenerator.com" target="_blank">Deep Dream Generator</a></h3>
+                <p>使用深度神经网络生成梦幻风格的图像。</p>
+                <p><strong>优点</strong>: 艺术风格处理效果好，用户可以生成超现实的图像。</p>
+            </li>
+            <li>
+                <h3><a href="https://www.artbreeder.com" target="_blank">Artbreeder</a></h3>
+                <p>通过基因编辑和混合图像生成新的艺术作品。</p>
+                <p><strong>优点</strong>: 提供强大的图像编辑和合成功能。</p>
+            </li>
+            <!-- 更多工具继续添加 -->
+        </ul>
+    </section>
 
-<!-- 免费工具 -->
-<div id="free-tools">
-    <h2>免费 AI 工具</h2>
+    <!-- 其他工具分类 -->
+    <!-- 根据需求继续增加 -->
 
-    <h3>图像生成与编辑</h3>
-    <ul>
-        <li><a href="https://www.craiyon.com" target="_blank">Craiyon</a></li>
-        <li><a href="https://deepdreamgenerator.com" target="_blank">Deep Dream Generator</a></li>
-        <li><a href="https://www.artbreeder.com" target="_blank">Artbreeder</a></li>
-        <li><a href="https://runwayml.com" target="_blank">Runway</a></li>
-        <li><a href="https://creator.nightcafe.studio" target="_blank">NightCafe</a></li>
-        <li><a href="https://www.fotor.com/features/ai-image-generator" target="_blank">Fotor AI Image Generator</a></li>
-    </ul>
-
-    <h3>文本生成与处理</h3>
-    <ul>
-        <li><a href="https://chat.openai.com" target="_blank">ChatGPT</a></li>
-        <li><a href="https://www.jasper.ai" target="_blank">Jasper</a></li>
-        <li><a href="https://write.scribehow.com" target="_blank">Scribe</a></li>
-        <li><a href="https://www.copy.ai" target="_blank">Copy.ai</a></li>
-        <li><a href="https://writesonic.com" target="_blank">Writesonic</a></li>
-        <li><a href="https://www.rytr.me" target="_blank">Rytr</a></li>
-    </ul>
-
-    <h3>音频工具</h3>
-    <ul>
-        <li><a href="https://www.descript.com" target="_blank">Descript</a></li>
-        <li><a href="https://www.veed.io" target="_blank">Veed.io</a></li>
-        <li><a href="https://sonantic.com" target="_blank">Sonantic</a></li>
-        <li><a href="https://www.lalal.ai" target="_blank">Lalal.ai</a></li>
-        <li><a href="https://www.amberscript.com" target="_blank">Amberscript</a></li>
-        <li><a href="https://www.aiva.ai" target="_blank">Aiva</a></li>
-    </ul>
-
-    <h3>编程工具</h3>
-    <ul>
-        <li><a href="https://www.copilot.github.com" target="_blank">GitHub Copilot</a></li>
-        <li><a href="https://www.tabnine.com" target="_blank">Tabnine</a></li>
-        <li><a href="https://kite.com" target="_blank">Kite</a></li>
-        <li><a href="https://www.codex.openai.com" target="_blank">OpenAI Codex</a></li>
-        <li><a href="https://www.intelliCode.visualstudio.com" target="_blank">IntelliCode</a></li>
-        <li><a href="https://www.deepcode.ai" target="_blank">DeepCode</a></li>
-    </ul>
-
-</div>
+</main>
 
 <footer>
     <p>&copy; 2025 AI 工具大全 | 版权所有</p>
