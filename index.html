@@ -4,17 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI 工具大全</title>
-    <link rel="stylesheet" href="style.css">
+    
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-RE73CZDVNN"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
       gtag('config', 'G-RE73CZDVNN');
     </script>
+    
+    <link rel="stylesheet" href="style.css">
     <style>
+        /* 全局样式 */
         body {
             font-family: Arial, sans-serif;
             line-height: 1.6;
@@ -28,31 +30,38 @@
             background-color: #2c3e50;
             color: white;
             padding: 20px 0;
+        }
+
+        header h1 {
             text-align: center;
+            font-size: 2em;
         }
 
         nav ul {
             display: flex;
             justify-content: center;
-            list-style: none;
+            list-style-type: none;
+            margin: 0;
             padding: 0;
         }
 
         nav ul li {
-            margin: 0 15px;
+            margin: 0 20px;
         }
 
         nav ul li a {
             color: white;
             text-decoration: none;
             font-size: 18px;
+            padding: 10px;
         }
 
         nav ul li a:hover {
-            text-decoration: underline;
+            background-color: #34495e;
+            border-radius: 5px;
         }
 
-        .container {
+        main.container {
             padding: 20px;
         }
 
@@ -66,29 +75,32 @@
             color: #2c3e50;
         }
 
-        ul {
-            list-style: none;
+        section ul {
+            list-style-type: none;
             padding: 0;
         }
 
-        ul li {
-            margin-bottom: 10px;
+        section ul li {
+            margin: 15px 0;
+            font-size: 18px;
         }
 
-        ul li a {
+        section a {
+            font-size: 18px;
             text-decoration: none;
             color: #3498db;
+            display: inline-block;
+            margin-top: 10px;
         }
 
-        ul li a:hover {
+        section a:hover {
             text-decoration: underline;
         }
 
-        .more-link {
-            display: block;
-            margin-top: 10px;
-            text-align: right;
-            font-size: 16px;
+        .tool-description {
+            font-size: 14px;
+            color: #7f8c8d;
+            margin-top: 5px;
         }
 
         footer {
@@ -102,103 +114,70 @@
 <body>
 
 <header>
-    <h1>AI 工具大全</h1>
-    <nav>
-        <ul>
-            <li><a href="index.html">首页</a></li>
-            <li><a href="#image-tools">图像工具</a></li>
-            <li><a href="#text-tools">文本工具</a></li>
-            <li><a href="#audio-tools">音频工具</a></li>
-            <li><a href="#programming-tools">编程工具</a></li>
-            <li><a href="#marketing-tools">营销工具</a></li>
-            <li><a href="#design-tools">设计工具</a></li>
-        </ul>
-    </nav>
+    <div class="container">
+        <h1>AI 工具大全</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">首页</a></li>
+                <li><a href="#image-tools">图像工具</a></li>
+                <li><a href="#text-tools">文本工具</a></li>
+                <li><a href="#audio-tools">音频工具</a></li>
+                <li><a href="#programming-tools">编程工具</a></li>
+                <li><a href="#marketing-tools">营销工具</a></li>
+                <li><a href="#design-tools">设计工具</a></li>
+                <li><a href="feedback.html">问题反馈</a></li>
+            </ul>
+        </nav>
+    </div>
 </header>
 
 <main class="container">
-    <!-- 图像工具 -->
+    <!-- 图像生成与编辑工具 -->
     <section id="image-tools">
-        <h2>图像工具</h2>
+        <h2>图像生成与编辑工具</h2>
         <ul>
-            <li><a href="https://www.canva.com" target="_blank">Canva</a></li>
-            <li><a href="https://www.pixabay.com" target="_blank">Pixabay</a></li>
-            <li><a href="https://www.remove.bg" target="_blank">Remove.bg</a></li>
-            <li><a href="https://www.fotor.com" target="_blank">Fotor</a></li>
-            <li><a href="https://www.photopea.com" target="_blank">Photopea</a></li>
-            <li><a href="https://www.artbreeder.com" target="_blank">Artbreeder</a></li>
+            <li>
+                <h3><a href="https://www.craiyon.com" target="_blank">Craiyon</a></h3>
+                <div class="tool-description">
+                    <span>优点:</span> 一键生成图像，快速且简单，非常适合创意图像生成。
+                </div>
+            </li>
+            <li>
+                <h3><a href="https://deepdreamgenerator.com" target="_blank">Deep Dream Generator</a></h3>
+                <div class="tool-description">
+                    <span>优点:</span> 提供梦幻般的艺术风格，支持多个图像变换选项。
+                </div>
+            </li>
         </ul>
-        <a href="more-tools.html#image-tools" class="more-link">查看更多图像工具</a>
+        <a href="tool-detail.html#image-tools">查看更多图像生成与编辑工具</a>
     </section>
 
-    <!-- 文本工具 -->
+    <!-- 文本生成与处理工具 -->
     <section id="text-tools">
-        <h2>文本工具</h2>
+        <h2>文本生成与处理工具</h2>
         <ul>
-            <li><a href="https://chat.openai.com" target="_blank">ChatGPT</a></li>
-            <li><a href="https://www.grammarly.com" target="_blank">Grammarly</a></li>
-            <li><a href="https://www.jasper.ai" target="_blank">Jasper</a></li>
-            <li><a href="https://www.copy.ai" target="_blank">Copy.ai</a></li>
-            <li><a href="https://www.quillbot.com" target="_blank">QuillBot</a></li>
-            <li><a href="https://www.sudowrite.com" target="_blank">Sudowrite</a></li>
+            <li>
+                <h3><a href="https://chat.openai.com" target="_blank">ChatGPT</a></h3>
+                <div class="tool-description">
+                    <span>优点:</span> 强大的对话式生成工具，适合文本创作与自然语言处理。
+                </div>
+            </li>
         </ul>
-        <a href="more-tools.html#text-tools" class="more-link">查看更多文本工具</a>
+        <a href="tool-detail.html#text-tools">查看更多文本生成与处理工具</a>
     </section>
 
-    <!-- 音频工具 -->
+    <!-- 音频处理工具 -->
     <section id="audio-tools">
-        <h2>音频工具</h2>
+        <h2>音频处理工具</h2>
         <ul>
-            <li><a href="https://www.audacityteam.org" target="_blank">Audacity</a></li>
-            <li><a href="https://www.soundtrap.com" target="_blank">Soundtrap</a></li>
-            <li><a href="https://www.alitu.com" target="_blank">Alitu</a></li>
-            <li><a href="https://www.zencastr.com" target="_blank">Zencastr</a></li>
-            <li><a href="https://www.bandlab.com" target="_blank">BandLab</a></li>
-            <li><a href="https://www.soundcloud.com" target="_blank">SoundCloud</a></li>
+            <li>
+                <h3><a href="https://www.audacityteam.org" target="_blank">Audacity</a></h3>
+                <div class="tool-description">
+                    <span>优点:</span> 免费开源的音频编辑软件，功能全面，适合音频制作。
+                </div>
+            </li>
         </ul>
-        <a href="more-tools.html#audio-tools" class="more-link">查看更多音频工具</a>
-    </section>
-
-    <!-- 编程工具 -->
-    <section id="programming-tools">
-        <h2>编程工具</h2>
-        <ul>
-            <li><a href="https://www.github.com" target="_blank">GitHub</a></li>
-            <li><a href="https://www.gitlab.com" target="_blank">GitLab</a></li>
-            <li><a href="https://www.visualstudio.com" target="_blank">Visual Studio Code</a></li>
-            <li><a href="https://www.jetbrains.com" target="_blank">JetBrains</a></li>
-            <li><a href="https://replit.com" target="_blank">Replit</a></li>
-            <li><a href="https://www.stackoverflow.com" target="_blank">Stack Overflow</a></li>
-        </ul>
-        <a href="more-tools.html#programming-tools" class="more-link">查看更多编程工具</a>
-    </section>
-
-    <!-- 营销工具 -->
-    <section id="marketing-tools">
-        <h2>营销工具</h2>
-        <ul>
-            <li><a href="https://www.hootsuite.com" target="_blank">Hootsuite</a></li>
-            <li><a href="https://www.mailchimp.com" target="_blank">Mailchimp</a></li>
-            <li><a href="https://www.hubspot.com" target="_blank">HubSpot</a></li>
-            <li><a href="https://buffer.com" target="_blank">Buffer</a></li>
-            <li><a href="https://www.sproutsocial.com" target="_blank">Sprout Social</a></li>
-            <li><a href="https://www.semrush.com" target="_blank">SEMRush</a></li>
-        </ul>
-        <a href="more-tools.html#marketing-tools" class="more-link">查看更多营销工具</a>
-    </section>
-
-    <!-- 设计工具 -->
-    <section id="design-tools">
-        <h2>设计工具</h2>
-        <ul>
-            <li><a href="https://www.figma.com" target="_blank">Figma</a></li>
-            <li><a href="https://www.adobe.com" target="_blank">Adobe Creative Cloud</a></li>
-            <li><a href="https://www.sketch.com" target="_blank">Sketch</a></li>
-            <li><a href="https://www.canva.com" target="_blank">Canva</a></li>
-            <li><a href="https://www.invisionapp.com" target="_blank">InVision</a></li>
-            <li><a href="https://www.procreate.art" target="_blank">Procreate</a></li>
-        </ul>
-        <a href="more-tools.html#design-tools" class="more-link">查看更多设计工具</a>
+        <a href="tool-detail.html#audio-tools">查看更多音频处理工具</a>
     </section>
 </main>
 
