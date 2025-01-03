@@ -1,143 +1,103 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>问题反馈</title>
+    <title>Feedback Form</title>
     <style>
-        /* 问题反馈表单样式 */
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+            background-color: #f9f9f9;
             margin: 0;
             padding: 0;
         }
 
-        .feedback-container {
+        .container {
             max-width: 600px;
-            margin: 30px auto;
+            margin: 50px auto;
             padding: 20px;
             background-color: #fff;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
-        .feedback-container h2 {
+        h2 {
             text-align: center;
-            font-size: 24px;
             margin-bottom: 20px;
+            font-size: 24px;
+            color: #333;
         }
 
-        .feedback-form label {
+        form label {
             display: block;
             margin-bottom: 10px;
-            font-size: 16px;
+            font-weight: bold;
         }
 
-        .feedback-form input,
-        .feedback-form textarea {
+        form input, form textarea {
             width: 100%;
             padding: 10px;
-            margin-top: 5px;
+            margin-bottom: 20px;
             border: 1px solid #ddd;
             border-radius: 4px;
             font-size: 16px;
         }
 
-        .feedback-form button {
+        form button {
+            display: block;
             width: 100%;
-            padding: 12px;
-            background-color: #2c3e50;
-            color: white;
-            font-size: 18px;
+            padding: 10px;
+            background-color: #007BFF;
+            color: #fff;
             border: none;
             border-radius: 4px;
+            font-size: 16px;
             cursor: pointer;
-            margin-top: 10px;
         }
 
-        .feedback-form button:hover {
-            background-color: #34495e;
+        form button:hover {
+            background-color: #0056b3;
         }
 
-        .response-message {
+        footer {
             text-align: center;
-            font-size: 18px;
-            margin-top: 20px;
-            color: #27ae60;
-            display: none;
+            padding: 20px;
+            color: #777;
+            background-color: #f1f1f1;
         }
     </style>
 </head>
 <body>
+
     <header>
-        <h1 style="text-align: center; margin-top: 20px;">问题反馈页面</h1>
+        <h1 style="text-align: center; margin-top: 20px;">Feedback Page</h1>
     </header>
 
-    <main class="feedback-container">
-        <h2>问题反馈</h2>
-        <form class="feedback-form" action="https://formspree.io/f/xkggqygq" method="POST" id="feedback-form">
-            <label for="email">邮箱：</label>
-            <input 
-                type="email" 
-                id="email" 
-                name="email" 
-                placeholder="请输入您的邮箱" 
-                required
+    <main>
+        <div class="container">
+            <h2>Feedback Form</h2>
+            <!-- 表单保持不变 -->
+            <form
+              action="https://formspree.io/f/xkggqygq"
+              method="POST"
             >
-            
-            <label for="message">反馈内容：</label>
-            <textarea 
-                id="message" 
-                name="message" 
-                rows="5" 
-                placeholder="请输入您的反馈" 
-                required
-            ></textarea>
-            
-            <button type="submit" id="submit-button">提交反馈</button>
-        </form>
-
-        <div class="response-message" id="response-message">
-            感谢您的反馈！我们会尽快与您联系。
+              <label>
+                Your email:
+                <input type="email" name="email">
+              </label>
+              <label>
+                Your message:
+                <textarea name="message"></textarea>
+              </label>
+              <!-- your other form fields go here -->
+              <button type="submit">Send</button>
+            </form>
         </div>
     </main>
 
     <footer>
-        <p style="text-align: center; padding: 20px 0; color: #777;">&copy; 2025 AI 工具大全 - All Rights Reserved</p>
+        <p>&copy; 2025 Your Company - All Rights Reserved</p>
     </footer>
 
-    <script>
-        // 提交表单并显示反馈消息
-        document.getElementById('feedback-form').addEventListener('submit', function(event) {
-            event.preventDefault(); // 阻止表单默认提交行为
-            
-            const submitButton = document.getElementById('submit-button');
-            const responseMessage = document.getElementById('response-message');
-            
-            // 禁用提交按钮并改变其文字
-            submitButton.disabled = true;
-            submitButton.textContent = '提交中...';
-            
-            // 发送表单数据
-            fetch(this.action, {
-                method: this.method,
-                body: new FormData(this),
-                headers: { 'Accept': 'application/json' }
-            }).then(response => {
-                if (response.ok) {
-                    responseMessage.style.display = 'block';
-                    this.reset(); // 清空表单
-                } else {
-                    alert('提交失败，请重试！');
-                }
-            }).catch(() => {
-                alert('网络错误，请稍后重试！');
-            }).finally(() => {
-                submitButton.disabled = false;
-                submitButton.textContent = '提交反馈';
-            });
-        });
-    </script>
 </body>
 </html>
