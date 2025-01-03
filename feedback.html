@@ -4,21 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>问题反馈</title>
-    <link rel="stylesheet" href="style.css">
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RE73CZDVNN"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-RE73CZDVNN');
-    </script>
-    
     <style>
         /* 问题反馈表单样式 */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
         .feedback-container {
-            width: 50%;
+            max-width: 600px;
             margin: 30px auto;
             padding: 20px;
             background-color: #fff;
@@ -32,10 +28,17 @@
             margin-bottom: 20px;
         }
 
-        .feedback-form input, .feedback-form textarea {
+        .feedback-form label {
+            display: block;
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+
+        .feedback-form input,
+        .feedback-form textarea {
             width: 100%;
             padding: 10px;
-            margin: 10px 0;
+            margin-top: 5px;
             border: 1px solid #ddd;
             border-radius: 4px;
             font-size: 16px;
@@ -50,6 +53,7 @@
             border: none;
             border-radius: 4px;
             cursor: pointer;
+            margin-top: 10px;
         }
 
         .feedback-form button:hover {
@@ -61,69 +65,79 @@
             font-size: 18px;
             margin-top: 20px;
             color: #27ae60;
+            display: none;
         }
     </style>
 </head>
 <body>
+    <header>
+        <h1 style="text-align: center; margin-top: 20px;">问题反馈页面</h1>
+    </header>
 
-<header>
-    <div class="container">
-        <h1>AI 工具大全</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">首页</a></li>
-                <li><a href="#image-tools">图像工具</a></li>
-                <li><a href="#text-tools">文本工具</a></li>
-                <li><a href="#audio-tools">音频工具</a></li>
-                <li><a href="#programming-tools">编程工具</a></li>
-                <li><a href="#marketing-tools">营销工具</a></li>
-                <li><a href="#design-tools">设计工具</a></li>
-                <li><a href="feedback.html">问题反馈</a></li> <!-- 添加导航链接 -->
-            </ul>
-        </nav>
-    </div>
-</header>
-
-<main class="container">
-    <!-- 问题反馈表单 -->
-    <div class="feedback-container">
+    <main class="feedback-container">
         <h2>问题反馈</h2>
         <form class="feedback-form" action="https://formspree.io/f/xkggqygq" method="POST" id="feedback-form">
-            <label for="name">姓名：</label>
-            <input type="text" id="name" name="name" placeholder="请输入你的姓名" required>
-            
             <label for="email">邮箱：</label>
-            <input type="email" id="email" name="email" placeholder="请输入你的邮箱" required>
+            <input 
+                type="email" 
+                id="email" 
+                name="email" 
+                placeholder="请输入您的邮箱" 
+                required
+            >
             
             <label for="message">反馈内容：</label>
-            <textarea id="message" name="message" rows="6" placeholder="请输入你的问题或反馈" required></textarea>
+            <textarea 
+                id="message" 
+                name="message" 
+                rows="5" 
+                placeholder="请输入您的反馈" 
+                required
+            ></textarea>
             
-            <button type="submit">提交反馈</button>
+            <button type="submit" id="submit-button">提交反馈</button>
         </form>
 
-        <div class="response-message" id="response-message" style="display: none;">
-            谢谢您的反馈！我们会尽快回复您。
+        <div class="response-message" id="response-message">
+            感谢您的反馈！我们会尽快与您联系。
         </div>
-    </div>
+    </main>
 
-</main>
+    <footer>
+        <p style="text-align: center; padding: 20px 0; color: #777;">&copy; 2025 AI 工具大全 - All Rights Reserved</p>
+    </footer>
 
-<footer>
-    <p>&copy; 2025 AI 工具大全 - All Rights Reserved</p>
-</footer>
-
-<script>
-    // 提交表单并显示成功消息
-    document.getElementById('feedback-form').addEventListener('submit', function(event) {
-        event.preventDefault(); // 防止表单默认提交行为
-        
-        // 模拟表单提交
-        // 这里 Formspree 会自动处理表单发送
-        document.getElementById('response-message').style.display = 'block';
-        // 清空表单
-        document.getElementById('feedback-form').reset();
-    });
-</script>
-
+    <script>
+        // 提交表单并显示反馈消息
+        document.getElementById('feedback-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // 阻止表单默认提交行为
+            
+            const submitButton = document.getElementById('submit-button');
+            const responseMessage = document.getElementById('response-message');
+            
+            // 禁用提交按钮并改变其文字
+            submitButton.disabled = true;
+            submitButton.textContent = '提交中...';
+            
+            // 发送表单数据
+            fetch(this.action, {
+                method: this.method,
+                body: new FormData(this),
+                headers: { 'Accept': 'application/json' }
+            }).then(response => {
+                if (response.ok) {
+                    responseMessage.style.display = 'block';
+                    this.reset(); // 清空表单
+                } else {
+                    alert('提交失败，请重试！');
+                }
+            }).catch(() => {
+                alert('网络错误，请稍后重试！');
+            }).finally(() => {
+                submitButton.disabled = false;
+                submitButton.textContent = '提交反馈';
+            });
+        });
+    </script>
 </body>
 </html>
