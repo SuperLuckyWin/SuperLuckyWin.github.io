@@ -7,7 +7,7 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f9f9f9;
+            background-color: #f4f4f4;
             margin: 0;
             padding: 0;
         }
@@ -16,7 +16,7 @@
             max-width: 600px;
             margin: 50px auto;
             padding: 20px;
-            background-color: #fff;
+            background: #fff;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
@@ -24,7 +24,6 @@
         h2 {
             text-align: center;
             margin-bottom: 20px;
-            font-size: 24px;
             color: #333;
         }
 
@@ -61,35 +60,36 @@
 
         footer {
             text-align: center;
-            padding: 20px;
+            margin-top: 20px;
             color: #777;
             background-color: #f1f1f1;
+            padding: 10px;
         }
     </style>
 </head>
 <body>
 
     <header>
-        <h1 style="text-align: center; margin-top: 20px;">Feedback Page</h1>
+        <h1 style="text-align: center;">Feedback Form</h1>
     </header>
 
     <main>
         <div class="container">
-            <h2>Feedback Form</h2>
-            <!-- 表单保持不变 -->
+            <h2>Send Us Your Feedback</h2>
+            <!-- Formspree 表单 -->
             <form
               action="https://formspree.io/f/xkggqygq"
               method="POST"
+              onsubmit="return validateForm()"
             >
               <label>
                 Your email:
-                <input type="email" name="email">
+                <input type="email" name="email" id="email" placeholder="Enter your email" required>
               </label>
               <label>
                 Your message:
-                <textarea name="message"></textarea>
+                <textarea name="message" id="message" rows="5" placeholder="Enter your feedback" required></textarea>
               </label>
-              <!-- your other form fields go here -->
               <button type="submit">Send</button>
             </form>
         </div>
@@ -98,6 +98,18 @@
     <footer>
         <p>&copy; 2025 Your Company - All Rights Reserved</p>
     </footer>
+
+    <script>
+        function validateForm() {
+            const email = document.getElementById("email").value.trim();
+            const message = document.getElementById("message").value.trim();
+            if (!email || !message) {
+                alert("Please fill in both the email and the message fields.");
+                return false;
+            }
+            return true;
+        }
+    </script>
 
 </body>
 </html>
