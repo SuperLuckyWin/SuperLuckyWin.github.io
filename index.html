@@ -14,56 +14,45 @@
 
       gtag('config', 'G-RE73CZDVNN');
     </script>
-    
     <style>
-        /* 全局样式 */
         body {
             font-family: Arial, sans-serif;
             line-height: 1.6;
-            background-color: #f7f7f7; /* 灰色背景 */
+            background-color: #f7f7f7;
             color: #333;
             margin: 0;
             padding: 0;
         }
 
-        /* Header 样式 */
         header {
-            background-color: #2c3e50; /* 深蓝色背景 */
+            background-color: #2c3e50;
             color: white;
             padding: 20px 0;
-        }
-
-        header h1 {
             text-align: center;
-            font-size: 2em;
         }
 
         nav ul {
             display: flex;
             justify-content: center;
-            list-style-type: none;
-            margin: 0;
+            list-style: none;
             padding: 0;
         }
 
         nav ul li {
-            margin: 0 20px;
+            margin: 0 15px;
         }
 
         nav ul li a {
             color: white;
             text-decoration: none;
             font-size: 18px;
-            padding: 10px;
         }
 
         nav ul li a:hover {
-            background-color: #34495e; /* 灰蓝色背景 */
-            border-radius: 5px;
+            text-decoration: underline;
         }
 
-        /* 主体部分样式 */
-        main.container {
+        .container {
             padding: 20px;
         }
 
@@ -77,40 +66,31 @@
             color: #2c3e50;
         }
 
-        section ul {
-            list-style-type: none;
+        ul {
+            list-style: none;
             padding: 0;
         }
 
-        section ul li {
-            margin: 15px 0;
-            font-size: 18px;
+        ul li {
+            margin-bottom: 10px;
         }
 
-        section a {
-            font-size: 18px;
+        ul li a {
             text-decoration: none;
-            color: #3498db; /* 蓝色链接 */
-            display: inline-block;
-            margin-top: 10px;
+            color: #3498db;
         }
 
-        section a:hover {
+        ul li a:hover {
             text-decoration: underline;
         }
 
-        /* 优点注释样式 */
-        .tool-description {
-            font-size: 14px;
-            color: #7f8c8d; /* 灰色 */
-            margin-top: 5px;
+        .more-link {
+            display: block;
+            margin-top: 10px;
+            text-align: right;
+            font-size: 16px;
         }
 
-        .tool-description span {
-            color: #2c3e50;
-        }
-
-        /* 底部样式 */
         footer {
             background-color: #2c3e50;
             color: white;
@@ -122,203 +102,103 @@
 <body>
 
 <header>
-    <div class="container">
-        <h1>AI 工具大全</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">首页</a></li>
-                <li><a href="#image-tools">图像工具</a></li>
-                <li><a href="#text-tools">文本工具</a></li>
-                <li><a href="#audio-tools">音频工具</a></li>
-                <li><a href="#programming-tools">编程工具</a></li>
-                <li><a href="#marketing-tools">营销工具</a></li>
-                <li><a href="#design-tools">设计工具</a></li>
-                <li><a href="feedback.html">问题反馈</a></li> <!-- 添加问题反馈链接 -->
-            </ul>
-        </nav>
-    </div>
+    <h1>AI 工具大全</h1>
+    <nav>
+        <ul>
+            <li><a href="index.html">首页</a></li>
+            <li><a href="#image-tools">图像工具</a></li>
+            <li><a href="#text-tools">文本工具</a></li>
+            <li><a href="#audio-tools">音频工具</a></li>
+            <li><a href="#programming-tools">编程工具</a></li>
+            <li><a href="#marketing-tools">营销工具</a></li>
+            <li><a href="#design-tools">设计工具</a></li>
+        </ul>
+    </nav>
 </header>
 
 <main class="container">
-    <!-- 图像生成与编辑工具 -->
+    <!-- 图像工具 -->
     <section id="image-tools">
-        <h2>图像生成与编辑工具</h2>
+        <h2>图像工具</h2>
         <ul>
-            <li>
-                <h3><a href="https://www.craiyon.com" target="_blank">Craiyon</a></h3>
-                <div class="tool-description">
-                    <span>优点:</span> 一键生成图像，快速且简单，非常适合创意图像生成。<br>
-                    <span>Advantages:</span> Generates images with a click, fast and simple, great for creative image generation.
-                </div>
-            </li>
-            <li>
-                <h3><a href="https://deepdreamgenerator.com" target="_blank">Deep Dream Generator</a></h3>
-                <div class="tool-description">
-                    <span>优点:</span> 提供梦幻般的艺术风格，支持多个图像变换选项。<br>
-                    <span>Advantages:</span> Offers dreamy artistic styles with multiple image transformation options.
-                </div>
-            </li>
-            <li>
-                <h3><a href="https://www.artbreeder.com" target="_blank">Artbreeder</a></h3>
-                <div class="tool-description">
-                    <span>优点:</span> 强大的图像混合与生成工具，适合创意艺术工作者。<br>
-                    <span>Advantages:</span> Powerful image blending and generation tool, great for creative artists.
-                </div>
-            </li>
-            <li>
-                <h3><a href="https://www.pixray.github.io" target="_blank">Pixray</a></h3>
-                <div class="tool-description">
-                    <span>优点:</span> 支持文字生成图像，开源工具，易于使用。<br>
-                    <span>Advantages:</span> Text-to-image generation, open-source and easy to use.
-                </div>
-            </li>
-            <li>
-                <h3><a href="https://www.deeparteffects.com" target="_blank">Deep Art Effects</a></h3>
-                <div class="tool-description">
-                    <span>优点:</span> 高质量的艺术风格图像处理，支持不同的风格转换。<br>
-                    <span>Advantages:</span> High-quality artistic style image processing, supports various style transformations.
-                </div>
-            </li>
-            <li>
-                <h3><a href="https://runwayml.com" target="_blank">Runway</a></h3>
-                <div class="tool-description">
-                    <span>优点:</span> 强大的AI工具集合，适合视频编辑与创作。<br>
-                    <span>Advantages:</span> A powerful set of AI tools, great for video editing and creation.
-                </div>
-            </li>
+            <li><a href="https://www.canva.com" target="_blank">Canva</a></li>
+            <li><a href="https://www.pixabay.com" target="_blank">Pixabay</a></li>
+            <li><a href="https://www.remove.bg" target="_blank">Remove.bg</a></li>
+            <li><a href="https://www.fotor.com" target="_blank">Fotor</a></li>
+            <li><a href="https://www.photopea.com" target="_blank">Photopea</a></li>
+            <li><a href="https://www.artbreeder.com" target="_blank">Artbreeder</a></li>
         </ul>
-        <a href="tool-detail.html#image-tools">查看更多图像生成与编辑工具</a>
+        <a href="more-tools.html#image-tools" class="more-link">查看更多图像工具</a>
     </section>
 
-    <!-- 文本生成与处理工具 -->
+    <!-- 文本工具 -->
     <section id="text-tools">
-        <h2>文本生成与处理工具</h2>
+        <h2>文本工具</h2>
         <ul>
-            <li>
-                <h3><a href="https://chat.openai.com" target="_blank">ChatGPT</a></h3>
-                <div class="tool-description">
-                    <span>优点:</span> 强大的对话式生成工具，适合文本创作与自然语言处理。<br>
-                    <span>Advantages:</span> Powerful conversational tool, great for text creation and natural language processing.
-                </div>
-            </li>
-            <li>
-                <h3><a href="https://www.jasper.ai" target="_blank">Jasper</a></h3>
-                <div class="tool-description">
-                    <span>优点:</span> 专注于营销文案生成，支持多种语言和写作风格。<br>
-                    <span>Advantages:</span> Focuses on marketing copy generation, supports multiple languages and writing styles.
-                </div>
-            </li>
-            <li>
-                <h3><a href="https://www.copy.ai" target="_blank">Copy.ai</a></h3>
-                <div class="tool-description">
-                    <span>优点:</span> 易于使用的AI文案生成工具，帮助提高工作效率。<br>
-                    <span>Advantages:</span> Easy-to-use AI copywriting tool that boosts work efficiency.
-                </div>
-            </li>
-            <li>
-                <h3><a href="https://www.grammarly.com" target="_blank">Grammarly</a></h3>
-                <div class="tool-description">
-                    <span>优点:</span> 强大的语法检查和写作建议工具，适合日常写作和编辑。<br>
-                    <span>Advantages:</span> Powerful grammar check and writing suggestions tool, great for daily writing and editing.
-                </div>
-            </li>
-            <li>
-                <h3><a href="https://www.quillbot.com" target="_blank">QuillBot</a></h3>
-                <div class="tool-description">
-                    <span>优点:</span> 提供智能改写功能，提升写作质量和效率。<br>
-                    <span>Advantages:</span> Offers smart rewriting features, improves writing quality and efficiency.
-                </div>
-            </li>
+            <li><a href="https://chat.openai.com" target="_blank">ChatGPT</a></li>
+            <li><a href="https://www.grammarly.com" target="_blank">Grammarly</a></li>
+            <li><a href="https://www.jasper.ai" target="_blank">Jasper</a></li>
+            <li><a href="https://www.copy.ai" target="_blank">Copy.ai</a></li>
+            <li><a href="https://www.quillbot.com" target="_blank">QuillBot</a></li>
+            <li><a href="https://www.sudowrite.com" target="_blank">Sudowrite</a></li>
         </ul>
-        <a href="tool-detail.html#text-tools">查看更多文本生成与处理工具</a>
+        <a href="more-tools.html#text-tools" class="more-link">查看更多文本工具</a>
     </section>
 
     <!-- 音频工具 -->
     <section id="audio-tools">
         <h2>音频工具</h2>
         <ul>
-            <li>
-                <h3><a href="https://www.soundraw.io" target="_blank">Soundraw</a></h3>
-                <div class="tool-description">
-                    <span>优点:</span> 生成与编辑音频，适用于创作者和音乐制作人。<br>
-                    <span>Advantages:</span> Generates and edits audio, suitable for creators and music producers.
-                </div>
-            </li>
-            <li>
-                <h3><a href="https://www.aisongwriter.ai" target="_blank">AI Songwriter</a></h3>
-                <div class="tool-description">
-                    <span>优点:</span> 帮助创作歌曲，支持歌词和旋律生成。<br>
-                    <span>Advantages:</span> Assists in songwriting, supports lyrics and melody generation.
-                </div>
-            </li>
+            <li><a href="https://www.audacityteam.org" target="_blank">Audacity</a></li>
+            <li><a href="https://www.soundtrap.com" target="_blank">Soundtrap</a></li>
+            <li><a href="https://www.alitu.com" target="_blank">Alitu</a></li>
+            <li><a href="https://www.zencastr.com" target="_blank">Zencastr</a></li>
+            <li><a href="https://www.bandlab.com" target="_blank">BandLab</a></li>
+            <li><a href="https://www.soundcloud.com" target="_blank">SoundCloud</a></li>
         </ul>
-        <a href="tool-detail.html#audio-tools">查看更多音频工具</a>
+        <a href="more-tools.html#audio-tools" class="more-link">查看更多音频工具</a>
     </section>
 
-    <!-- 更多工具的展示 -->
+    <!-- 编程工具 -->
     <section id="programming-tools">
         <h2>编程工具</h2>
         <ul>
-            <li>
-                <h3><a href="https://www.github.com" target="_blank">GitHub Copilot</a></h3>
-                <div class="tool-description">
-                    <span>优点:</span> 提供智能编程建议，提高编程效率。<br>
-                    <span>Advantages:</span> Provides intelligent coding suggestions, improving programming efficiency.
-                </div>
-            </li>
-            <li>
-                <h3><a href="https://www.replit.com" target="_blank">Replit</a></h3>
-                <div class="tool-description">
-                    <span>优点:</span> 在线编程环境，支持多人协作。<br>
-                    <span>Advantages:</span> Online coding environment with support for collaborative work.
-                </div>
-            </li>
+            <li><a href="https://www.github.com" target="_blank">GitHub</a></li>
+            <li><a href="https://www.gitlab.com" target="_blank">GitLab</a></li>
+            <li><a href="https://www.visualstudio.com" target="_blank">Visual Studio Code</a></li>
+            <li><a href="https://www.jetbrains.com" target="_blank">JetBrains</a></li>
+            <li><a href="https://replit.com" target="_blank">Replit</a></li>
+            <li><a href="https://www.stackoverflow.com" target="_blank">Stack Overflow</a></li>
         </ul>
-        <a href="tool-detail.html#programming-tools">查看更多编程工具</a>
+        <a href="more-tools.html#programming-tools" class="more-link">查看更多编程工具</a>
     </section>
 
-    <!-- 更多工具链接 -->
+    <!-- 营销工具 -->
     <section id="marketing-tools">
         <h2>营销工具</h2>
         <ul>
-            <li>
-                <h3><a href="https://www.hubspot.com" target="_blank">HubSpot</a></h3>
-                <div class="tool-description">
-                    <span>优点:</span> 综合性营销自动化平台，提升营销效率。<br>
-                    <span>Advantages:</span> Comprehensive marketing automation platform, boosts marketing efficiency.
-                </div>
-            </li>
-            <li>
-                <h3><a href="https://www.mailchimp.com" target="_blank">Mailchimp</a></h3>
-                <div class="tool-description">
-                    <span>优点:</span> 强大的电子邮件营销工具，支持自动化和分析。<br>
-                    <span>Advantages:</span> Powerful email marketing tool, supports automation and analytics.
-                </div>
-            </li>
+            <li><a href="https://www.hootsuite.com" target="_blank">Hootsuite</a></li>
+            <li><a href="https://www.mailchimp.com" target="_blank">Mailchimp</a></li>
+            <li><a href="https://www.hubspot.com" target="_blank">HubSpot</a></li>
+            <li><a href="https://buffer.com" target="_blank">Buffer</a></li>
+            <li><a href="https://www.sproutsocial.com" target="_blank">Sprout Social</a></li>
+            <li><a href="https://www.semrush.com" target="_blank">SEMRush</a></li>
         </ul>
-        <a href="tool-detail.html#marketing-tools">查看更多营销工具</a>
+        <a href="more-tools.html#marketing-tools" class="more-link">查看更多营销工具</a>
     </section>
 
     <!-- 设计工具 -->
     <section id="design-tools">
         <h2>设计工具</h2>
         <ul>
-            <li>
-                <h3><a href="https://www.canva.com" target="_blank">Canva</a></h3>
-                <div class="tool-description">
-                    <span>优点:</span> 在线图形设计工具，适用于社交媒体和广告设计。<br>
-                    <span>Advantages:</span> Online graphic design tool, great for social media and advertising design.
-                </div>
-            </li>
-            <li>
-                <h3><a href="https://www.figma.com" target="_blank">Figma</a></h3>
-                <div class="tool-description">
-                    <span>优点:</span> 强大的协作设计平台，支持实时多人编辑。<br>
-                    <span>Advantages:</span> Powerful collaborative design platform, supports real-time multi-user editing.
-                </div>
-            </li>
+            <li><a href="https://www.figma.com" target="_blank">Figma</a></li>
+            <li><a href="https://www.adobe.com" target="_blank">Adobe Creative Cloud</a></li>
+            <li><a href="https://www.sketch.com" target="_blank">Sketch</a></li>
+            <li><a href="https://www.canva.com" target="_blank">Canva</a></li>
+            <li><a href="https://www.invisionapp.com" target="_blank">InVision</a></li>
+            <li><a href="https://www.procreate.art" target="_blank">Procreate</a></li>
         </ul>
-        <a href="tool-detail.html#design-tools">查看更多设计工具</a>
+        <a href="more-tools.html#design-tools" class="more-link">查看更多设计工具</a>
     </section>
 </main>
 
